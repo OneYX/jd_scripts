@@ -1,5 +1,10 @@
 #！/bin/sh
 
+if [ "$1" = "" ]; then
+    sed -i '/^sh \/scripts\/docker\/default_task.sh/i\curl -Lso- https://waxgourd.coding.net/p/github/d/jd_scripts/git/raw/develop/docker/custom_init.sh | sh -s none' /usr/local/bin/docker_entrypoint.sh
+    return
+fi
+
 sed -i 's/requests/requests[socks]/g' /scripts/docker/bot/requirements.txt
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 mkdir -p $HOME/.config/pip && cat > $HOME/.config/pip/pip.conf <<EOF
