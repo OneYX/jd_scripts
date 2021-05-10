@@ -1,6 +1,7 @@
 #！/bin/sh
 
 sed -i '/^sh \/scripts\/docker\/default_task.sh/i\curl -Lso- https://waxgourd.coding.net/p/github/d/jd_scripts/git/raw/develop/docker/custom_init.sh | sh -s preInstall' /scripts/docker/docker_entrypoint.sh
+sed -i '/node\/sleep/s/jd_/jd_live_redrain.js\\|&/' /scripts/docker/default_task.sh
 
 function initEnv() {
     cat /scripts/docker/docker_entrypoint.sh >/usr/local/bin/docker_entrypoint.sh

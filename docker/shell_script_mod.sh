@@ -16,4 +16,5 @@ echo "追加定时任务..."
 curl -Lso- https://waxgourd.coding.net/p/github/d/jd_scripts/git/raw/develop/docker/my_crontab_list.sh >> $mergedListFile
 
 echo "取消定时任务..."
-sed -i '/syj.js/s/^/# &/' $mergedListFile
+git -C /scripts checkout 6ca4c16 jd_syj.js
+# sed -i '/syj.js/s/^/# &/' $mergedListFile
