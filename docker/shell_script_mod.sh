@@ -13,7 +13,6 @@ sed -i '/port: process.env.TG_PROXY_PORT \* 1$/s/$/,\proxyAuth: process.env.TG_P
 
 echo "下载脚本..."
 downloadFiles "https://waxgourd.coding.net/p/github/d/MyActions/git/raw/main" "jdJxncTokens jx_cfdtx"
-downloadFiles "https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx" "jd_half_redrain jd_super_redrain"
 
 echo "追加定时任务..."
 curl -Lso- https://waxgourd.coding.net/p/github/d/jd_scripts/git/raw/develop/docker/my_crontab_list.sh >> $mergedListFile
